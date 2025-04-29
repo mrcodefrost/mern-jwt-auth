@@ -4,6 +4,7 @@ import express, { Request, Response } from "express";
 import connectToDatabse from "./config/db";
 import { APP_ORIGIN, NODE_ENV, PORT } from "./constants/env";
 import cookieParser from "cookie-parser";
+import errorHandler from "./middleware/errorHandler";
 
 const app = express();
 
