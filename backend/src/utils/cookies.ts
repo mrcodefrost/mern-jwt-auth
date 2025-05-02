@@ -29,4 +29,4 @@ type Params = {
 }
 
 export const setAuthCookies = ({res, accessToken, refreshToken}: Params) => 
-    res.cookie("accessToken", accessToken).cookie("refreshToken", refreshToken);
+    res.cookie("accessToken", accessToken, getAccessTokenCookieOptions()).cookie("refreshToken", refreshToken, getRefreshTokenCookieOptions());
